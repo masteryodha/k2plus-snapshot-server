@@ -5,14 +5,24 @@ The K2 camera is such a pain to be able to view it everywhere (browser, creatlit
 # Build the docker
 
 '''
-docker build -t creality-snapshot .
+docker build -t k2plus-snapshot-server:1.0 .
+
+docker login
+docker push mikamap/k2plus-snapshot-server:1.0
+
 '''
 
 # Usage
 
 '''
-docker run -d -e CAM_URL="http://192.168.3.85:8000/" -e INTERVAL=5 -p 5000:5000 creality-snapshot
+docker run -d -e CAM_URL="http://192.168.3.85:8000/" -e INTERVAL=5 -p 5011:5000 k2plus-snapshot-server:1.0
+
 '''
+
+| Parameters | Mandatory |  Description |
+|:-----|:--------:|:--------:|
+| CAM_URL   | Yes | URL of the creality K2 plus camera.  Default value = 192.168.3.85:8000/ |
+| INTERVAL  | No |  Refresh rate of the snapshot.  Default value = 5  |
 
 # Output
 
