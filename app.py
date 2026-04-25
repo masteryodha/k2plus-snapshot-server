@@ -28,10 +28,10 @@ def snapshot_loop():
                 size = os.path.getsize(TEMP_PATH)
 
                 if size < MIN_VALID_SIZE:
-                    print("Frame manquée (image trop petite).")
+                    print("Frame manquée (image trop petite).", flush=True)
                 else:
                     os.replace(TEMP_PATH, SNAPSHOT_PATH)
-                    print(f"Snapshot mis à jour ({size/1024:.1f} KB)")
+                    print(f"Snapshot mis à jour ({size/1024:.1f} KB)", flush=True)
 
             except Exception as e:
                 print("Erreur snapshot :", e)

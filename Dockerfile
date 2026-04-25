@@ -31,4 +31,4 @@ COPY app.py .
 COPY default_snapshot.jpg /app/snapshot.jpg
 
 # Lancer Xvfb + ton script
-CMD xvfb-run -s "-screen 0 1280x720x24" python app.py
+CMD xvfb-run -s "-screen 0 1280x720x24" python -u app.py
