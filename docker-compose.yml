@@ -3,10 +3,11 @@ version: "3.9"
 services:
   snapshot:
     build: .
-    container_name: mikamap/k2plus-snapshot-server:1.0
+    container_name: k2plus-snapshot-server
+    image: mikamap/k2plus-snapshot-server:1.0
     environment:
       CAM_URL: "http://192.168.3.85:8000/"
       INTERVAL: 5
     ports:
-      - "5000:5000"
+      - "5011:5000"
     restart: unless-stopped
