@@ -58,14 +58,14 @@ Cette image est mise à jour automatiquement selon l’intervalle configuré.
 ### Build local
 
 ```bash
-docker build -t mikamap/k2plus-snapshot-server:1.0 .
+docker build -t mikamap/k2plus-snapshot-server:X.X .
 ```
 
 ### Pousser vers DockerHub
 
 ```bash
 docker login
-docker push mikamap/k2plus-snapshot-server:1.0
+docker push mikamap/k2plus-snapshot-server:X.X
 ```
 
 ---
